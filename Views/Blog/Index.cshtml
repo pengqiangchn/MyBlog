@@ -1,7 +1,20 @@
 ﻿
 @{
-    ViewData["Title"] = "View";
+    ViewData["Title"] = "Blog";
+}
+
+@section Content{
+    <link rel="stylesheet" href="~/Content/Blog/blog.css" />
+}
+
+@section Scripts{
+    <script src="~/Scripts/Blog/Blog.js"></script>
 }
 
 <h1>View</h1>
+<div id="blogApp">
+    Vue Test
+    This is Test
+    <div>{{ message }}</div>
+</div>
 

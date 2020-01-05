@@ -13,9 +13,9 @@ namespace MyBlog.Controllers
         //    return View();
         //}
 
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is Blog Ttest Index Action";
+            return View();
         }
 
         public string Hello(string name, int id)
