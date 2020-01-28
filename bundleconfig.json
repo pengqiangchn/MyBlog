@@ -1,0 +1,27 @@
+[
+  {
+    "outputFileName": "wwwroot/Content/Blog/all.min.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "wwwroot/Content/Blog/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/Content/Blog/bootstrap.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/dist/css/bootstrap.css"
+    ],
+    "minify": {
+      "enabled": true
+    }
+  }
+  //{
+  //  "outputFileName": "wwwroot/Scripts/jquery.js",
+  //  "inputFiles": [
+  //    "wwwroot/lib/jquery/dist/jquery.js"
+  //  ],
+  //  "minify": {
+  //    "enabled": true
+  //  }
+  //}
+]

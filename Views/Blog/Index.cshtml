@@ -1,6 +1,7 @@
-﻿
+﻿@model MyBlog.DTO.Blog.IndexInfoDto
+
 @{
-    ViewData["Title"] = "Blog";
+
 }
 
 @section Content{
@@ -11,10 +12,16 @@
     <script src="~/Scripts/Blog/Blog.js"></script>
 }
 
-<h1>View</h1>
-<div id="blogApp">
-    Vue Test
-    This is Test
-    <div>{{ message }}</div>
-</div>
+<h2>MY Blog List</h2>
+
+<p>This is MVC Template</p>
+
+<p>
+    <div> Test:</div>
+    <div style="font-size:30px">
+        @Model.BlogInfo.BlogName
+    </div>
+
+</p>
+
 

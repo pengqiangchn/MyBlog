@@ -1,26 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using MyBlog.Context;
+using MyBlog.DTO.Blog;
+using MyBlog.Models.Blog.Entity;
 
 namespace MyBlog.Controllers
 {
     public class BlogController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+        private readonly MyBlogContext _context;
+        private readonly IMapper _map;
+
+        public BlogController(MyBlogContext context, IMapper map)
+        {
+            _context = context;
+            _map = map;
+        }
 
         public IActionResult Index()
         {
-            return View();
+            BlogInfo info = _context.BlogInfo.First();
+            IndexInfoDto dto = new IndexInfoDto();
+            dto.BlogInfo = _map.Map<BlogInfoDto>(info);
+
+            return View(dto);
         }
 
-        public string Hello(string name, int id)
+        public JsonResult Test()
         {
-            return $"This is Blog Hello Function Name {name } ID {id}";
+            BlogClass bs = new BlogClass()
+            {
+                ClassId = "123",
+                BlogId = "223",
+                ClassName = "Test",
+                ParentId = "333",
+                Level = 1
+            };
+
+            ClassInfoDto dto = _map.Map<ClassInfoDto>(bs);
+
+            return Json(dto);
+
         }
 
     }
