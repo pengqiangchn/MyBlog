@@ -12,7 +12,6 @@ namespace MyBlog.DTO.Blog
         /// </summary>
         public BlogInfoDto BlogInfo { get; set; }
 
-
         /// <summary>
         /// 文章归档信息
         /// </summary>
@@ -21,7 +20,7 @@ namespace MyBlog.DTO.Blog
         /// <summary>
         /// 简介
         /// </summary>
-        public List<BriefIntroductionDto> BriefIntroduction { get; set; }
+        public List<BriefIntroductionDto> BriefIntroductionList { get; set; }
 
         /// <summary>
         /// 分类归档信息

@@ -1,7 +1,7 @@
 ﻿@model MyBlog.DTO.Blog.IndexInfoDto
 
 @{
-
+    ViewData["Title"] = Model.BlogInfo.BlogName;
 }
 
 @section Content{
@@ -19,8 +19,11 @@
 <p>
     <div> Test:</div>
     <div style="font-size:30px">
-        @Model.BlogInfo.BlogName
     </div>
+
+    @Html.DisplayFor(m => m.BriefIntroductionList, "BriefIntroduction")
+
+
 
 </p>
 

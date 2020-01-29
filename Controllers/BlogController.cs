@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -19,11 +20,32 @@ namespace MyBlog.Controllers
             _map = map;
         }
 
+        public IActionResult Admin()
+        {
+            return View();
+        }
+
+        public IActionResult ClassInfo()
+        {
+            return View();
+        }
+        public IActionResult ArticleInfo()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             BlogInfo info = _context.BlogInfo.First();
             IndexInfoDto dto = new IndexInfoDto();
             dto.BlogInfo = _map.Map<BlogInfoDto>(info);
+            BriefIntroductionDto brief = new BriefIntroductionDto();
+            brief.Title = "测试";
+            dto.BriefIntroductionList = new List<BriefIntroductionDto>();
+            dto.BriefIntroductionList.Add(brief);
+
+            dto.BriefIntroductionList.Add(new BriefIntroductionDto() { Title = "测试2" });
+
 
             return View(dto);
         }

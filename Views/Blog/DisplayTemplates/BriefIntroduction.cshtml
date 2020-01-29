@@ -1,0 +1,7 @@
+﻿@model List<MyBlog.DTO.Blog.BriefIntroductionDto>
+@{
+    foreach (var brief in Model)
+    {
+        <h3>@brief.Title</h3>
+    }
+}
