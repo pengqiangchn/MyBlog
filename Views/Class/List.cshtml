@@ -1,0 +1,30 @@
+﻿@model List<ClassInfoDto>
+
+@{
+    ViewBag.Title = "分类管理";
+    Layout = "LeftBarLayout";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>类别</th>
+            <th>操作</th>
+            <th>文章数</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var classInfo in Model)
+        {
+            <tr>
+                <td>@classInfo.OrderId</td>
+                <td>@classInfo.ClassName</td>
+                <td><a asp-action="Edit">编辑</a> &ensp;|&ensp;<a asp-action="Delete">删除</a></td>
+                <td>@classInfo.Count</td>
+            </tr>
+
+        }
+    </tbody>
+</table>

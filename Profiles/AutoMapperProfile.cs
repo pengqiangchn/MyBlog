@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using MyBlog.DTO.Blog;
-using MyBlog.Models.Blog.Entity;
+using MyBlog.Models.DTO;
+using MyBlog.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace MyBlog.Profiles
 {
-    public class MyProfile : Profile
+    public class AutoMapperProfile : Profile
     {
-        public MyProfile()
+        public AutoMapperProfile()
         {
             CreateMap<BlogInfo, BlogInfoDto>();
 

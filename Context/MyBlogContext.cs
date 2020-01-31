@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MyBlog.Models.Blog.Entity;
+using MyBlog.Models.Entity;
 
 namespace MyBlog.Context
 {

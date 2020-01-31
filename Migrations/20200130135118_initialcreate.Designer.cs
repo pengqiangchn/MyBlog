@@ -9,8 +9,8 @@ using MyBlog.Context;
 namespace MyBlog.Migrations
 {
     [DbContext(typeof(MyBlogContext))]
-    [Migration("20200115124314_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200130135118_initialcreate")]
+    partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,7 +19,7 @@ namespace MyBlog.Migrations
                 .HasAnnotation("ProductVersion", "3.1.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("MyBlog.Models.Blog.BlogArticle", b =>
+            modelBuilder.Entity("MyBlog.Models.Blog.Entity.BlogArticle", b =>
                 {
                     b.Property<string>("ArticleId")
                         .HasColumnType("varchar(32)");
@@ -30,14 +30,8 @@ namespace MyBlog.Migrations
                     b.Property<string>("ClassId")
                         .HasColumnType("varchar(32)");
 
-                    b.Property<int>("CollectCount")
-                        .HasColumnType("int");
-
                     b.Property<string>("Content")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<int>("ContentType")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime(6)");
@@ -52,14 +46,14 @@ namespace MyBlog.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(128)");
 
                     b.HasKey("ArticleId");
 
                     b.ToTable("BlogArticle");
                 });
 
-            modelBuilder.Entity("MyBlog.Models.Blog.BlogClass", b =>
+            modelBuilder.Entity("MyBlog.Models.Blog.Entity.BlogClass", b =>
                 {
                     b.Property<string>("ClassId")
                         .HasColumnType("varchar(32)");
@@ -68,10 +62,13 @@ namespace MyBlog.Migrations
                         .HasColumnType("varchar(32)");
 
                     b.Property<string>("ClassName")
-                        .HasColumnType("varchar(128)");
+                        .HasColumnType("varchar(32)");
 
                     b.Property<int>("Level")
                         .HasColumnType("int");
+
+                    b.Property<string>("OrderID")
+                        .HasColumnType("varchar(12)");
 
                     b.Property<string>("ParentId")
                         .HasColumnType("varchar(32)");
@@ -81,7 +78,7 @@ namespace MyBlog.Migrations
                     b.ToTable("BlogClass");
                 });
 
-            modelBuilder.Entity("MyBlog.Models.Blog.BlogInfo", b =>
+            modelBuilder.Entity("MyBlog.Models.Blog.Entity.BlogInfo", b =>
                 {
                     b.Property<string>("BlogId")
                         .HasColumnType("varchar(32)");

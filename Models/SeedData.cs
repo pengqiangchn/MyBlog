@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using MyBlog.Models.Blog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MyBlog.Context;
-using MyBlog.Models.Blog.Entity;
+using MyBlog.Models.Entity;
 
 namespace MyBlog.Models
 {

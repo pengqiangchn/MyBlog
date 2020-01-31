@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace MyBlog.DTO.Blog
+namespace MyBlog.Models.DTO
 {
     public class ArticleFileDto
     {

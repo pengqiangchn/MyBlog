@@ -4,8 +4,8 @@ using System.Linq;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using MyBlog.Context;
-using MyBlog.DTO.Blog;
-using MyBlog.Models.Blog.Entity;
+using MyBlog.Models.DTO;
+using MyBlog.Models.Entity;
 
 namespace MyBlog.Controllers
 {
@@ -18,20 +18,6 @@ namespace MyBlog.Controllers
         {
             _context = context;
             _map = map;
-        }
-
-        public IActionResult Admin()
-        {
-            return View();
-        }
-
-        public IActionResult ClassInfo()
-        {
-            return View();
-        }
-        public IActionResult ArticleInfo()
-        {
-            return View();
         }
 
         public IActionResult Index()

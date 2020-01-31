@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MyBlog.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initialcreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,12 +16,10 @@ namespace MyBlog.Migrations
                     ClassId = table.Column<string>(type: "varchar(32)", nullable: true),
                     CreateTime = table.Column<DateTime>(nullable: false),
                     EditTime = table.Column<DateTime>(nullable: false),
-                    Title = table.Column<string>(nullable: true),
+                    Title = table.Column<string>(type: "varchar(128)", nullable: true),
                     Content = table.Column<string>(nullable: true),
-                    ContentType = table.Column<int>(nullable: false),
                     ReadCount = table.Column<int>(nullable: false),
-                    PraiseCount = table.Column<int>(nullable: false),
-                    CollectCount = table.Column<int>(nullable: false)
+                    PraiseCount = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -34,9 +32,10 @@ namespace MyBlog.Migrations
                 {
                     ClassId = table.Column<string>(type: "varchar(32)", nullable: false),
                     BlogId = table.Column<string>(type: "varchar(32)", nullable: true),
-                    ClassName = table.Column<string>(type: "varchar(128)", nullable: true),
+                    ClassName = table.Column<string>(type: "varchar(32)", nullable: true),
                     ParentId = table.Column<string>(type: "varchar(32)", nullable: true),
-                    Level = table.Column<int>(nullable: false)
+                    Level = table.Column<int>(nullable: false),
+                    OrderID = table.Column<string>(type: "varchar(12)", nullable: true)
                 },
                 constraints: table =>
                 {

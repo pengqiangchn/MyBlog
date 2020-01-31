@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyBlog.Models.Blog.Entity
+namespace MyBlog.Models.Entity
 {
     public class BlogInfo
     {

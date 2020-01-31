@@ -35,8 +35,6 @@ namespace MyBlog
             }
 
             host.Run();
-
-
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

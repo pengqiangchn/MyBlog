@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyBlog.Models.Blog.Entity
+namespace MyBlog.Models.Entity
 {
     public class BlogClass
     {
@@ -38,6 +38,12 @@ namespace MyBlog.Models.Blog.Entity
         /// 层级
         /// </summary>
         public int Level { get; set; }
+
+        /// <summary>
+        /// 序号
+        /// </summary>
+        [Column(TypeName = "varchar(12)")]
+        public string OrderID { get; set; }
 
     }
 }

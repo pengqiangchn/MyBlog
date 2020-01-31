@@ -1,4 +1,4 @@
-﻿namespace MyBlog.Enum.Blog
+﻿namespace MyBlog.Enum
 {
     /// <summary>
     /// 解析方式枚举

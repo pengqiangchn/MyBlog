@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyBlog.DTO.Blog
+namespace MyBlog.Models.DTO
 {
     /// <summary>
     /// 分类显示
