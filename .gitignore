@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/MyBlog/DesignTimeBuild/.dtbcache
+/.vs/MyBlog/v16/Server/sqlite3/storage.ide-wal
+/.vs/MyBlog/v16/Server/sqlite3/storage.ide-shm
+/.vs/MyBlog/v16/Server/sqlite3/storage.ide
+/.vs/MyBlog/v16/Server/sqlite3/db.lock

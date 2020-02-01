@@ -1,0 +1,76 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Application.Services/1.0.0": {
+        "dependencies": {
+          "Domain.Modules": "1.0.0",
+          "Domain.Services": "1.0.0"
+        },
+        "runtime": {
+          "Application.Services.dll": {}
+        }
+      },
+      "Domain.Modules/1.0.0": {
+        "dependencies": {
+          "Domain.Seedwork": "1.0.0"
+        },
+        "runtime": {
+          "Domain.Modules.dll": {}
+        }
+      },
+      "Domain.Seedwork/1.0.0": {
+        "dependencies": {
+          "Infrastructure.Crosscutting": "1.0.0"
+        },
+        "runtime": {
+          "Domain.Seedwork.dll": {}
+        }
+      },
+      "Domain.Services/1.0.0": {
+        "dependencies": {
+          "Domain.Modules": "1.0.0"
+        },
+        "runtime": {
+          "Domain.Services.dll": {}
+        }
+      },
+      "Infrastructure.Crosscutting/1.0.0": {
+        "runtime": {
+          "Infrastructure.Crosscutting.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Application.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain.Modules/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain.Seedwork/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Infrastructure.Crosscutting/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

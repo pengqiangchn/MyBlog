@@ -1,0 +1,13 @@
+D:\Code-GitHub\MyBlog\Domain.Modules\bin\Debug\netcoreapp3.1\Domain.Modules.deps.json
+D:\Code-GitHub\MyBlog\Domain.Modules\bin\Debug\netcoreapp3.1\Domain.Modules.dll
+D:\Code-GitHub\MyBlog\Domain.Modules\bin\Debug\netcoreapp3.1\Domain.Modules.pdb
+D:\Code-GitHub\MyBlog\Domain.Modules\bin\Debug\netcoreapp3.1\Domain.Seedwork.dll
+D:\Code-GitHub\MyBlog\Domain.Modules\bin\Debug\netcoreapp3.1\Infrastructure.Crosscutting.dll
+D:\Code-GitHub\MyBlog\Domain.Modules\bin\Debug\netcoreapp3.1\Domain.Seedwork.pdb
+D:\Code-GitHub\MyBlog\Domain.Modules\bin\Debug\netcoreapp3.1\Infrastructure.Crosscutting.pdb
+D:\Code-GitHub\MyBlog\Domain.Modules\obj\Debug\netcoreapp3.1\Domain.Modules.csprojAssemblyReference.cache
+D:\Code-GitHub\MyBlog\Domain.Modules\obj\Debug\netcoreapp3.1\Domain.Modules.AssemblyInfoInputs.cache
+D:\Code-GitHub\MyBlog\Domain.Modules\obj\Debug\netcoreapp3.1\Domain.Modules.AssemblyInfo.cs
+D:\Code-GitHub\MyBlog\Domain.Modules\obj\Debug\netcoreapp3.1\Domain.Modules.csproj.CopyComplete
+D:\Code-GitHub\MyBlog\Domain.Modules\obj\Debug\netcoreapp3.1\Domain.Modules.dll
+D:\Code-GitHub\MyBlog\Domain.Modules\obj\Debug\netcoreapp3.1\Domain.Modules.pdb

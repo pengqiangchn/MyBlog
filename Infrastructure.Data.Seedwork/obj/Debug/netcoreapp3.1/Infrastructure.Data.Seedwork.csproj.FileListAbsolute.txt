@@ -1,0 +1,15 @@
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\bin\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.deps.json
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\bin\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.dll
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\bin\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.pdb
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\obj\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.AssemblyInfoInputs.cache
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\obj\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.AssemblyInfo.cs
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\obj\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.dll
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\obj\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.pdb
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\bin\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.runtimeconfig.json
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\bin\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.runtimeconfig.dev.json
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\bin\Debug\netcoreapp3.1\Domain.Seedwork.dll
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\bin\Debug\netcoreapp3.1\Domain.Seedwork.pdb
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\obj\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.csprojAssemblyReference.cache
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\obj\Debug\netcoreapp3.1\Infrastructure.Data.Seedwork.csproj.CopyComplete
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\bin\Debug\netcoreapp3.1\Infrastructure.Crosscutting.dll
+D:\Code-GitHub\MyBlog\Infrastructure.Data.Seedwork\bin\Debug\netcoreapp3.1\Infrastructure.Crosscutting.pdb

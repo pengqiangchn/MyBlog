@@ -1,0 +1,15 @@
+D:\Code-GitHub\MyBlog\Application.DTO\bin\Debug\netcoreapp3.1\Application.DTO.deps.json
+D:\Code-GitHub\MyBlog\Application.DTO\bin\Debug\netcoreapp3.1\Application.DTO.dll
+D:\Code-GitHub\MyBlog\Application.DTO\bin\Debug\netcoreapp3.1\Application.DTO.pdb
+D:\Code-GitHub\MyBlog\Application.DTO\obj\Debug\netcoreapp3.1\Application.DTO.AssemblyInfoInputs.cache
+D:\Code-GitHub\MyBlog\Application.DTO\obj\Debug\netcoreapp3.1\Application.DTO.AssemblyInfo.cs
+D:\Code-GitHub\MyBlog\Application.DTO\obj\Debug\netcoreapp3.1\Application.DTO.dll
+D:\Code-GitHub\MyBlog\Application.DTO\obj\Debug\netcoreapp3.1\Application.DTO.pdb
+D:\Code-GitHub\MyBlog\Application.DTO\bin\Debug\netcoreapp3.1\Application.Seedwork.dll
+D:\Code-GitHub\MyBlog\Application.DTO\bin\Debug\netcoreapp3.1\Domain.Seedwork.dll
+D:\Code-GitHub\MyBlog\Application.DTO\bin\Debug\netcoreapp3.1\Infrastructure.Crosscutting.dll
+D:\Code-GitHub\MyBlog\Application.DTO\bin\Debug\netcoreapp3.1\Application.Seedwork.pdb
+D:\Code-GitHub\MyBlog\Application.DTO\bin\Debug\netcoreapp3.1\Domain.Seedwork.pdb
+D:\Code-GitHub\MyBlog\Application.DTO\bin\Debug\netcoreapp3.1\Infrastructure.Crosscutting.pdb
+D:\Code-GitHub\MyBlog\Application.DTO\obj\Debug\netcoreapp3.1\Application.DTO.csprojAssemblyReference.cache
+D:\Code-GitHub\MyBlog\Application.DTO\obj\Debug\netcoreapp3.1\Application.DTO.csproj.CopyComplete

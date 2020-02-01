@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Application.DTO/1.0.0": {
+        "dependencies": {
+          "Application.Seedwork": "1.0.0"
+        },
+        "runtime": {
+          "Application.DTO.dll": {}
+        }
+      },
+      "Application.Seedwork/1.0.0": {
+        "dependencies": {
+          "Domain.Seedwork": "1.0.0"
+        },
+        "runtime": {
+          "Application.Seedwork.dll": {}
+        }
+      },
+      "Domain.Seedwork/1.0.0": {
+        "dependencies": {
+          "Infrastructure.Crosscutting": "1.0.0"
+        },
+        "runtime": {
+          "Domain.Seedwork.dll": {}
+        }
+      },
+      "Infrastructure.Crosscutting/1.0.0": {
+        "runtime": {
+          "Infrastructure.Crosscutting.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Application.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Application.Seedwork/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain.Seedwork/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Infrastructure.Crosscutting/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
