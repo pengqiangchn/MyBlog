@@ -1,7 +1,0 @@
-D:\Code-GitHub\MyBlog\Distributed.Seedwork\bin\Debug\netcoreapp3.1\Distributed.Seedwork.deps.json
-D:\Code-GitHub\MyBlog\Distributed.Seedwork\bin\Debug\netcoreapp3.1\Distributed.Seedwork.dll
-D:\Code-GitHub\MyBlog\Distributed.Seedwork\bin\Debug\netcoreapp3.1\Distributed.Seedwork.pdb
-D:\Code-GitHub\MyBlog\Distributed.Seedwork\obj\Debug\netcoreapp3.1\Distributed.Seedwork.AssemblyInfoInputs.cache
-D:\Code-GitHub\MyBlog\Distributed.Seedwork\obj\Debug\netcoreapp3.1\Distributed.Seedwork.AssemblyInfo.cs
-D:\Code-GitHub\MyBlog\Distributed.Seedwork\obj\Debug\netcoreapp3.1\Distributed.Seedwork.dll
-D:\Code-GitHub\MyBlog\Distributed.Seedwork\obj\Debug\netcoreapp3.1\Distributed.Seedwork.pdb

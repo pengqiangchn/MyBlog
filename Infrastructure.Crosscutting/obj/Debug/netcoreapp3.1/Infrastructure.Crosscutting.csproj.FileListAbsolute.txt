@@ -1,7 +1,0 @@
-D:\Code-GitHub\MyBlog\Infrastructure.Crosscutting\bin\Debug\netcoreapp3.1\Infrastructure.Crosscutting.deps.json
-D:\Code-GitHub\MyBlog\Infrastructure.Crosscutting\bin\Debug\netcoreapp3.1\Infrastructure.Crosscutting.dll
-D:\Code-GitHub\MyBlog\Infrastructure.Crosscutting\bin\Debug\netcoreapp3.1\Infrastructure.Crosscutting.pdb
-D:\Code-GitHub\MyBlog\Infrastructure.Crosscutting\obj\Debug\netcoreapp3.1\Infrastructure.Crosscutting.AssemblyInfoInputs.cache
-D:\Code-GitHub\MyBlog\Infrastructure.Crosscutting\obj\Debug\netcoreapp3.1\Infrastructure.Crosscutting.AssemblyInfo.cs
-D:\Code-GitHub\MyBlog\Infrastructure.Crosscutting\obj\Debug\netcoreapp3.1\Infrastructure.Crosscutting.dll
-D:\Code-GitHub\MyBlog\Infrastructure.Crosscutting\obj\Debug\netcoreapp3.1\Infrastructure.Crosscutting.pdb
