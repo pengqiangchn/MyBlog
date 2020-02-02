@@ -62,9 +62,10 @@ namespace MyBlog
             services.AddScoped<IBlogAppService, BlogAppService>();
 
             //Adapters
+            services.AddSingleton<ITypeAdapterFactory, AutomapperTypeAdapterFactory>();
+            //TypeAdapterFactory.SetCurrent(services.BuildServiceProvider().GetService<ITypeAdapterFactory>());
+
             services.AddAutoMapper();
-            services.AddScoped<ITypeAdapterFactory, AutomapperTypeAdapterFactory>();
-            TypeAdapterFactory.SetCurrent(services.BuildServiceProvider().GetService<ITypeAdapterFactory>());
 
             //Validator
             EntityValidatorFactory.SetCurrent(new DataAnnotationsEntityValidatorFactory());
@@ -82,7 +83,11 @@ namespace MyBlog
 
             app.UseStaticFiles();
 
-            //app.addu
+            //app.useou
+            //app.get
+
+            app.SetTypeAdapterFactory(app.ApplicationServices.GetService<ITypeAdapterFactory>(),
+                app.ApplicationServices.GetService<IMapper>());
 
             app.UseRouting();
 

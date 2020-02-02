@@ -4,11 +4,11 @@ namespace Domain.Seedwork
 {
     public sealed class AutoInject : Attribute
     {
-        public Type TargetType { get; }
+        public Type SourceType { get; }
 
-        public AutoInject(Type targetType)
+        public AutoInject(Type sourceType)
         {
-            TargetType = targetType;
+            SourceType = sourceType;
         }
     }
 }

@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Application.DTO;
+using Application.Seedwork;
 using AutoMapper;
+using Domain.Modules.BlogAgg;
+using Infrastructure.Data.UnitOfWorks;
 using Microsoft.AspNetCore.Mvc;
 using MyBlog.Context;
 using MyBlog.Models.DTO;
@@ -11,10 +15,10 @@ namespace MyBlog.Controllers
 {
     public class BlogController : Controller
     {
-        private readonly MyBlogContext _context;
+        private readonly UnitOfWork _context;
         private readonly IMapper _map;
 
-        public BlogController(MyBlogContext context, IMapper map)
+        public BlogController(UnitOfWork context, IMapper map)
         {
             _context = context;
             _map = map;
@@ -22,15 +26,15 @@ namespace MyBlog.Controllers
 
         public IActionResult Index()
         {
-            BlogInfo info = _context.BlogInfo.First();
+            //BlogInfo info = _context.BlogInfo.First();
             IndexInfoDto dto = new IndexInfoDto();
-            dto.BlogInfo = _map.Map<BlogInfoDto>(info);
-            BriefIntroductionDto brief = new BriefIntroductionDto();
-            brief.Title = "测试";
-            dto.BriefIntroductionList = new List<BriefIntroductionDto>();
-            dto.BriefIntroductionList.Add(brief);
+            //dto.BlogInfo = _map.Map<BlogInfoDto>(info);
+            //BriefIntroductionDto brief = new BriefIntroductionDto();
+            //brief.Title = "测试";
+            //dto.BriefIntroductionList = new List<BriefIntroductionDto>();
+            //dto.BriefIntroductionList.Add(brief);
 
-            dto.BriefIntroductionList.Add(new BriefIntroductionDto() { Title = "测试2" });
+            //dto.BriefIntroductionList.Add(new BriefIntroductionDto() { Title = "测试2" });
 
 
             return View(dto);
@@ -38,18 +42,17 @@ namespace MyBlog.Controllers
 
         public JsonResult Test()
         {
-            BlogClass bs = new BlogClass()
+            Blog blog = new Blog()
             {
-                ClassId = "123",
                 BlogId = "223",
-                ClassName = "Test",
-                ParentId = "333",
-                Level = 1
+                BlogName = "Test"
             };
 
-            //bs.MapTo<ClassInfoDto>();
+            ////bs.MapTo<ClassInfoDto>();
 
-            ClassInfoDto dto = _map.Map<ClassInfoDto>(bs);
+            //ClassInfoDto dto = _map.Map<ClassInfoDto>(bs);
+
+            BlogDTO dto = blog.MapTo<BlogDTO>(); ;
 
             return Json(dto);
 

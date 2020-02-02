@@ -14,6 +14,6 @@ namespace Infrastructure.Crosscutting.Adapter
         /// Create a type adater
         /// </summary>
         /// <returns>The created ITypeAdapter</returns>
-        ITypeAdapter Create();
+        ITypeAdapter Create(object param);
     }
 }

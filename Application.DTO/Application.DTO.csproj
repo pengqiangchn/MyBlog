@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Application.Seedwork\Application.Seedwork.csproj" />
+    <ProjectReference Include="..\Domain.Modules\Domain.Modules.csproj" />
   </ItemGroup>
 
 </Project>

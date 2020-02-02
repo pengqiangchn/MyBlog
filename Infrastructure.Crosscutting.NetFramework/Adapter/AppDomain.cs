@@ -17,22 +17,20 @@ namespace Infrastructure.Crosscutting.NetFramework.Adapter
         public Assembly[] GetAssemblies()
         {
             var assemblies = new List<Assembly>();
-            var dependencies = DependencyContext.Default.RuntimeLibraries;
+            var dependencies = DependencyContext.Default.RuntimeLibraries.Where(d => d.Name.ToUpper().EndsWith("DTO"));
+
             foreach (var library in dependencies)
             {
-                if (IsCandidateCompilationLibrary(library))
-                {
                     var assembly = Assembly.Load(new AssemblyName(library.Name));
                     assemblies.Add(assembly);
-                }
             }
             return assemblies.ToArray();
         }
 
-        private static bool IsCandidateCompilationLibrary(RuntimeLibrary compilationLibrary)
-        {
-            return compilationLibrary.Name == ("NLayerApp")
-                || compilationLibrary.Dependencies.Any(d => d.Name.StartsWith("NLayerApp"));
-        }
+        //private static bool IsCandidateCompilationLibrary(RuntimeLibrary compilationLibrary)
+        //{
+        //    return compilationLibrary.Name == ("NLayerApp")
+        //        || compilationLibrary.Dependencies.Any(d => d.Name.StartsWith("NLayerApp"));
+        //}
     }
 }
