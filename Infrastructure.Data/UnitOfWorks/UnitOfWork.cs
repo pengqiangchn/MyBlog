@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Infrastructure.Data.UnitOfWork
+namespace Infrastructure.Data.UnitOfWorks
 {
     public class UnitOfWork : BaseContext
     {

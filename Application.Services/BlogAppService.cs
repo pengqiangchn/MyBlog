@@ -1,6 +1,6 @@
-﻿using Application.Services.Interface;
+﻿using Application.Services.Interfaces;
 using Domain.Modules.BlogAgg;
-using Domain.Services.Interface;
+using Domain.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;

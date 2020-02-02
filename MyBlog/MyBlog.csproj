@@ -18,6 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="AutoInjectAttribute.cs" />
+    <Compile Remove="AutoInjectFactory.cs" />
+    <Compile Remove="AutoMapperHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
@@ -34,6 +40,14 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Services\Application.Services.csproj" />
+    <ProjectReference Include="..\Domain.Services\Domain.Services.csproj" />
+    <ProjectReference Include="..\Infrastructure.Crosscutting.NetFramework\Infrastructure.Crosscutting.NetFramework.csproj" />
+    <ProjectReference Include="..\Infrastructure.Crosscutting\Infrastructure.Crosscutting.csproj" />
+    <ProjectReference Include="..\Infrastructure.Data\Infrastructure.Data.csproj" />
   </ItemGroup>
 
 </Project>

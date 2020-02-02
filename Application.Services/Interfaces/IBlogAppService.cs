@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace Application.Services.Interface
+namespace Application.Services.Interfaces
 {
-    interface IBlogAppService
+    public interface IBlogAppService
     {
         IList<Blog> GetAllBlog();
     }

@@ -47,6 +47,8 @@ namespace MyBlog.Controllers
                 Level = 1
             };
 
+            //bs.MapTo<ClassInfoDto>();
+
             ClassInfoDto dto = _map.Map<ClassInfoDto>(bs);
 
             return Json(dto);

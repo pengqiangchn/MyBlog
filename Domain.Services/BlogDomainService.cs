@@ -1,6 +1,6 @@
 ﻿using Domain.Modules.BlogAgg;
 using Domain.Seedwork.Common;
-using Domain.Services.Interface;
+using Domain.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

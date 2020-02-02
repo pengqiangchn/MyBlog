@@ -1,13 +1,9 @@
 using Domain.Modules.BlogAgg;
 using Infrastructure.Data.Seedwork;
-using Infrastructure.Data.UnitOfWork;
-using Microsoft.EntityFrameworkCore;
+using Infrastructure.Data.UnitOfWorks;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace NLayerApp.Infrastructure.Data.BlogBoundedContext.BlogModule.Repositories
+namespace Infrastructure.Data.Repositories
 {
     public class BlogRepository : Repository<Blog>, IBlogRepository
     {

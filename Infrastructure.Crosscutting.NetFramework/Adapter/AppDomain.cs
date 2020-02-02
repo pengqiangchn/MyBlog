@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Extensions.DependencyModel;
+using System.Linq;
 
 namespace Infrastructure.Crosscutting.NetFramework.Adapter
 {
-    using System.Linq;
     public class AppDomain
     {
         public static AppDomain CurrentDomain { get; private set; }

@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Seedwork\Domain.Seedwork.csproj" />
     <ProjectReference Include="..\Infrastructure.Crosscutting\Infrastructure.Crosscutting.csproj" />
   </ItemGroup>
 
