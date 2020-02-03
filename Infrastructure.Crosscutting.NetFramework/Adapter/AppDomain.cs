@@ -17,12 +17,12 @@ namespace Infrastructure.Crosscutting.NetFramework.Adapter
         public Assembly[] GetAssemblies()
         {
             var assemblies = new List<Assembly>();
-            var dependencies = DependencyContext.Default.RuntimeLibraries.Where(d => d.Name.ToUpper().EndsWith("DTO"));
+            var dependencies = DependencyContext.Default.RuntimeLibraries.Where(d => d.Name.ToLower().EndsWith("dto") || d.Name.ToLower().EndsWith("dtos"));
 
             foreach (var library in dependencies)
             {
-                    var assembly = Assembly.Load(new AssemblyName(library.Name));
-                    assemblies.Add(assembly);
+                var assembly = Assembly.Load(new AssemblyName(library.Name));
+                assemblies.Add(assembly);
             }
             return assemblies.ToArray();
         }

@@ -1,21 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using MyBlog.Context;
-using MyBlog.Models.Entity;
+using Infrastructure.Data.UnitOfWorks;
+using Domain.Modules.BlogInfoAgg;
 
-namespace MyBlog.Models
+namespace Infrastructure.Data
 {
-
     public static class SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using var context = new MyBlogContext(
-                serviceProvider.GetRequiredService<DbContextOptions<MyBlogContext>>());
+            using var context = new UnitOfWorkDbContext(
+                serviceProvider.GetRequiredService<DbContextOptions<UnitOfWorkDbContext>>());
             if (context.BlogInfo.Any())
             {
                 return;

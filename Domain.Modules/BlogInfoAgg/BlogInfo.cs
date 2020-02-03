@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Domain.Modules.BlogAgg
+namespace Domain.Modules.BlogInfoAgg
 {
     /// <summary>
     /// A blog is the main instance in this API. I contains a list of posts.
     /// </summary>
-    public class Blog : AuditableEntity, IValidatableObject
+    public class BlogInfo : Entity, IValidatableObject
     {
         /// <summary>
         /// 主键

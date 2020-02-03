@@ -1,7 +1,7 @@
 ﻿using Application.Services;
 using Application.Services.Interfaces;
 using AutoMapper;
-using Domain.Modules.BlogAgg;
+using Domain.Modules.BlogInfoAgg;
 using Domain.Services;
 using Domain.Services.Interfaces;
 using Infrastructure.Crosscutting.Adapter;
@@ -18,8 +18,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MyBlog.Context;
-using MyBlog.Profiles;
 
 namespace MyBlog
 {
@@ -37,7 +35,7 @@ namespace MyBlog
             // Configure EntityFramework to use an InMemory database.
             //services.AddDbContext<MyBlogContext>(options =>
             //        options.UseMySql(Configuration.GetConnectionString("MyBlogContext")));
-            services.AddDbContext<UnitOfWork>(options =>
+            services.AddDbContext<UnitOfWorkDbContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("MyBlogContext")));
 
             services.AddControllersWithViews(options =>
@@ -52,14 +50,14 @@ namespace MyBlog
 
 
             //Repositories
-            services.AddScoped<IBlogRepository, BlogRepository>();
+            services.AddScoped<IBlogInfoRepository, BlogInfoRepository>();
 
 
             //DomainServices
             services.AddScoped<IBlogDomainService, BlogDomainService>();
 
             //AppServices
-            services.AddScoped<IBlogAppService, BlogAppService>();
+            services.AddScoped<IBlogInfoAppService, BlogInfoAppService>();
 
             //Adapters
             services.AddSingleton<ITypeAdapterFactory, AutomapperTypeAdapterFactory>();

@@ -1,5 +1,5 @@
 ﻿using Application.Services.Interfaces;
-using Domain.Modules.BlogAgg;
+using Domain.Modules.BlogInfoAgg;
 using Domain.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -7,16 +7,16 @@ using System.Text;
 
 namespace Application.Services
 {
-    public class BlogAppService : IBlogAppService
+    public class BlogInfoAppService : IBlogInfoAppService
     {
         private readonly IBlogDomainService _blogDomainService;
 
-        public BlogAppService(IBlogDomainService blogDomainService)
+        public BlogInfoAppService(IBlogDomainService blogDomainService)
         {
             _blogDomainService = blogDomainService;
         }
 
-        public IList<Blog> GetAllBlog()
+        public IList<BlogInfo> GetAllBlog()
         {
             var ss = _blogDomainService.GetAllBlog();
 

@@ -8,13 +8,25 @@
 
   <ItemGroup>
     <Compile Remove="AppServices\**" />
+    <Compile Remove="Context\**" />
     <Compile Remove="DomainServices\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="Profiles\**" />
     <Content Remove="AppServices\**" />
+    <Content Remove="Context\**" />
     <Content Remove="DomainServices\**" />
+    <Content Remove="Models\**" />
+    <Content Remove="Profiles\**" />
     <EmbeddedResource Remove="AppServices\**" />
+    <EmbeddedResource Remove="Context\**" />
     <EmbeddedResource Remove="DomainServices\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Profiles\**" />
     <None Remove="AppServices\**" />
+    <None Remove="Context\**" />
     <None Remove="DomainServices\**" />
+    <None Remove="Models\**" />
+    <None Remove="Profiles\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,18 +44,17 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.435" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application.DTO\Application.DTO.csproj" />
+    <ProjectReference Include="..\Application.DTOs\Application.DTOs.csproj" />
     <ProjectReference Include="..\Application.Services\Application.Services.csproj" />
     <ProjectReference Include="..\Domain.Services\Domain.Services.csproj" />
     <ProjectReference Include="..\Infrastructure.Crosscutting.NetFramework\Infrastructure.Crosscutting.NetFramework.csproj" />

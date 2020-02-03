@@ -1,4 +1,5 @@
-﻿using Domain.Modules.BlogAgg;
+﻿using Domain.Modules.BlogClassAgg;
+using Domain.Modules.BlogInfoAgg;
 using Domain.Seedwork.Common;
 using Domain.Services.Interfaces;
 using System;
@@ -7,19 +8,19 @@ using System.Linq;
 
 namespace Domain.Services
 {
-    public class BlogDomainService : DomainService<Blog>, IBlogDomainService
+    public class BlogDomainService : DomainService<BlogInfo>, IBlogDomainService
     {
-        private readonly IBlogRepository _blogRepository;
+        private readonly IBlogInfoRepository _blogRepository;
 
-        public BlogDomainService(IBlogRepository blogRepository)
+        public BlogDomainService(IBlogInfoRepository blogRepository)
             : base(blogRepository)
         {
             _blogRepository = blogRepository;
         }
 
-        public List<Blog> GetAllBlog()
+        public List<BlogInfo> GetAllBlog()
         {
-            List<Blog> list = GetAll().ToList();
+            var list = GetFiltered(b => b.BlogName.Contains("MyBlog")).ToList();
 
             return list;
         }
