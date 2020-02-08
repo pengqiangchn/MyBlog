@@ -1,5 +1,5 @@
 ﻿using Application.Services.Interfaces;
-using Domain.Modules.BlogInfoAgg;
+using Domain.Modules.BlogEntitys;
 using Domain.Services.Interfaces;
 using System;
 using System.Collections.Generic;

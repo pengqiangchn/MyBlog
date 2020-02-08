@@ -1,7 +1,7 @@
 ﻿using Application.Services;
 using Application.Services.Interfaces;
 using AutoMapper;
-using Domain.Modules.BlogInfoAgg;
+using Domain.Modules.BlogAggs;
 using Domain.Services;
 using Domain.Services.Interfaces;
 using Infrastructure.Crosscutting.Adapter;
@@ -35,14 +35,17 @@ namespace MyBlog
             // Configure EntityFramework to use an InMemory database.
             //services.AddDbContext<MyBlogContext>(options =>
             //        options.UseMySql(Configuration.GetConnectionString("MyBlogContext")));
-            services.AddDbContext<UnitOfWorkDbContext>(options =>
+            services.AddDbContext<UnitOfWork>(options =>
                     options.UseMySql(Configuration.GetConnectionString("MyBlogContext")));
 
-            services.AddControllersWithViews(options =>
-            {
-                //options.Filters.Add(new ValidateModelAttribute()); // an instance
-                //options.Filters.Add(typeof(LoggerAttribute));
-            }).AddRazorRuntimeCompilation();
+
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+            //services.AddControllersWithViews(options =>
+            //{
+            //    options.Filters.Add(new ValidateModelAttribute()); // an instance
+            //    options.Filters.Add(typeof(LoggerAttribute));
+            //}).AddRazorRuntimeCompilation();
 
 
             ////Custom Exception and validation Filter
@@ -51,13 +54,16 @@ namespace MyBlog
 
             //Repositories
             services.AddScoped<IBlogInfoRepository, BlogInfoRepository>();
+            services.AddScoped<IBlogUserRepository, BlogUserRepository>();
 
 
             //DomainServices
             services.AddScoped<IBlogDomainService, BlogDomainService>();
+            services.AddScoped<IUserDomainService, UserDomainService>();
 
             //AppServices
             services.AddScoped<IBlogInfoAppService, BlogInfoAppService>();
+            services.AddScoped<IBlogUserAppService, BlogUserAppService>();
 
             //Adapters
             services.AddSingleton<ITypeAdapterFactory, AutomapperTypeAdapterFactory>();

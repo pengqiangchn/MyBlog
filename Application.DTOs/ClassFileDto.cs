@@ -8,7 +8,7 @@ namespace Application.DTOs
     /// <summary>
     /// 分类显示
     /// </summary>
-    public class ClassFileDto
+    public class ClassFileDTO
     {
         /// <summary>
         /// 总数
@@ -25,6 +25,6 @@ namespace Application.DTOs
         /// 分类信息
         /// </summary>
 
-        public List<ClassInfoDto> ClassInfoList { get; set; }
+        public List<ClassInfoDTO> ClassInfoList { get; set; }
     }
 }

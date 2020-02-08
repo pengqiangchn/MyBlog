@@ -6,3 +6,5 @@ Add-Migration -Name InitialCreate -Project "Infrastructure.Data"  -Verbose
 
 //更新数据库
 Update-Database  -Project "Infrastructure.Data" -Verbose
+
+//选择 默认启动为 Myblog ,项目为 Infrastructure.Data  则不需要使用 带参数的命令

@@ -191,10 +191,12 @@ namespace Infrastructure.Data.Seedwork
         {
             return GetSet().FirstOrDefault(specification.SatisfiedBy());
         }
+
         public virtual async Task<TEntity> FirstMatchingAsync(ISpecification<TEntity> specification)
         {
             return await GetSet().FirstOrDefaultAsync(specification.SatisfiedBy());
         }
+
         public virtual TEntity FirstMatching<KProperty>(ISpecification<TEntity> specification, System.Linq.Expressions.Expression<Func<TEntity, KProperty>> orderByExpression, bool ascending)
         {
             var set = GetSet();

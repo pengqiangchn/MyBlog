@@ -1,10 +1,12 @@
+using Domain.Modules.BlogEntitys;
 using Domain.Seedwork;
 using System.Collections.Generic;
 
-namespace Domain.Modules.BlogInfoAgg
+namespace Domain.Modules.BlogAggs
 {
     public interface IBlogInfoRepository : IRepository<BlogInfo>
     {
+
 
     }
 }

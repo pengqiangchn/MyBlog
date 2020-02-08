@@ -1,5 +1,5 @@
-﻿using Domain.Modules.BlogClassAgg;
-using Domain.Modules.BlogInfoAgg;
+﻿using Domain.Modules.BlogAggs;
+using Domain.Modules.BlogEntitys;
 using Domain.Seedwork.Common;
 using Domain.Services.Interfaces;
 using System;
@@ -19,6 +19,18 @@ namespace Domain.Services
         }
 
         public List<BlogInfo> GetAllBlog()
+        {
+            var list = GetFiltered(b => b.BlogName.Contains("MyBlog")).ToList();
+
+            return list;
+        }
+
+        public BlogInfo GetBlogById(Guid id)
+        {
+            return _blogRepository.Get(id);
+        }
+
+        public List<BlogInfo> GetBloginfo()
         {
             var list = GetFiltered(b => b.BlogName.Contains("MyBlog")).ToList();
 

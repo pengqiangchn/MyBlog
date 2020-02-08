@@ -1,21 +1,23 @@
-﻿using System;
+﻿using Domain.Modules.BlogEntitys;
+using Domain.Seedwork;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Application.DTOs
 {
-    public class IndexInfoDto
+    public class IndexInfoDTO
     {
         /// <summary>
         /// 博客信息
         /// </summary>
-        public BlogInfoDto BlogInfo { get; set; }
+        public BlogInfoDTO BlogInfo { get; set; }
 
         /// <summary>
         /// 文章归档信息
         /// </summary>
-        public List<ArticleFileDto> ArticleFileList { get; set; }
+        public List<ArticleFileDTO> ArticleFileList { get; set; }
 
         /// <summary>
         /// 简介
@@ -25,7 +27,7 @@ namespace Application.DTOs
         /// <summary>
         /// 分类归档信息
         /// </summary>
-        public List<ClassFileDto> ClassFileList { get; set; }
+        public List<ClassFileDTO> ClassFileList { get; set; }
 
 
     }

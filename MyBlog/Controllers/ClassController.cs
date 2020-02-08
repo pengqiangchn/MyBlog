@@ -18,14 +18,14 @@ namespace MyBlog.Controllers
         [Route("Class/List")]
         public IActionResult List()
         {
-            List<ClassInfoDto> dtoList = new List<ClassInfoDto>();
-            dtoList.Add(new ClassInfoDto()
+            List<ClassInfoDTO> dtoList = new List<ClassInfoDTO>();
+            dtoList.Add(new ClassInfoDTO()
             {
                 ClassName = "测试1",
                 Count = 3,
                 OrderId = "1"
             });
-            dtoList.Add(new ClassInfoDto()
+            dtoList.Add(new ClassInfoDTO()
             {
                 ClassName = "测试2",
                 Count = 44,

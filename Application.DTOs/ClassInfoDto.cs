@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs
 {
-    public class ClassInfoDto
+    public class ClassInfoDTO
     {
         /// <summary>
         /// 分类ID

@@ -4,20 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Domain.Modules.BlogInfoAgg
+namespace Domain.Modules.BlogEntitys
 {
     /// <summary>
     /// A blog is the main instance in this API. I contains a list of posts.
     /// </summary>
-    public class BlogInfo : Entity, IValidatableObject
+    public class BlogInfo : EntityGuid, IValidatableObject
     {
-        /// <summary>
-        /// 主键
-        /// </summary>
-        [Column(TypeName = "varchar(32)")]
-        [Key]
-        public string BlogId { get; set; }
-
         /// <summary>
         /// 博客名
         /// </summary>
@@ -32,8 +25,14 @@ namespace Domain.Modules.BlogInfoAgg
         /// <summary>
         /// 使用人
         /// </summary>
-        [Column(TypeName = "varchar(32)")]
-        public string UserId { get; set; }
+        public Guid UserId { get; set; }
+
+        public virtual BlogUser User { get; set; }
+
+        public virtual List<BlogClass> Classes { get; set; }
+
+        public virtual List<BlogArticle> Articles { get; set; }
+
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

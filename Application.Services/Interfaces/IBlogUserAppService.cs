@@ -1,12 +1,13 @@
 ﻿
+using Application.DTOs;
 using Domain.Modules.BlogEntitys;
 using System;
 using System.Collections.Generic;
 
 namespace Application.Services.Interfaces
 {
-    public interface IBlogInfoAppService
+    public interface IBlogUserAppService
     {
-        IList<BlogInfo> GetAllBlog();
+        UserDTO GetUser(Guid id);
     }
 }

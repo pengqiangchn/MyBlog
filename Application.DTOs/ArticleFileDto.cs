@@ -1,7 +1,7 @@
 ﻿
 namespace Application.DTOs
 {
-    public class ArticleFileDto
+    public class ArticleFileDTO
     {
         /// <summary>
         /// 年份

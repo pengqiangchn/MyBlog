@@ -6,8 +6,8 @@ using System.Text;
 
 namespace Domain.Services.Interfaces
 {
-    public interface IBlogDomainService : IDomainService<BlogInfo>
+    public interface IUserDomainService : IDomainService<BlogUser>
     {
-        List<BlogInfo> GetAllBlog();
+
     }
 }

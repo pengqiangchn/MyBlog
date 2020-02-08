@@ -3,7 +3,6 @@ using System.Linq.Expressions;
 
 namespace Domain.Seedwork.Specification
 {
-
     /// <summary>
     /// Base contract for Specification pattern, for more information
     /// about this pattern see http://martinfowler.com/apsupp/spec.pdf

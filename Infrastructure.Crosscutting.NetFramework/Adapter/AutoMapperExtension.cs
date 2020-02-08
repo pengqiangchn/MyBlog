@@ -16,12 +16,27 @@ namespace Infrastructure.Crosscutting.NetFramework.Adapter
                 var mapperConfigurationExpression = serviceProvider.GetRequiredService<MapperConfigurationExpression>();
                 var factory = serviceProvider.GetRequiredService<ITypeAdapterFactory>();
 
-                foreach (var (sourceType, targetType) in factory.ConvertList)
-                {
-                    mapperConfigurationExpression.CreateMap(sourceType, targetType);
-                }
+                //mapperConfigurationExpression.CreateMap(cfg =>
+                //{
+                //});types
 
-                var instance = new MapperConfiguration(mapperConfigurationExpression);
+
+                //foreach (var (sourceType, targetType) in factory.ConvertList)
+                //{
+                //    mapperConfigurationExpression.CreateMap(sourceType, targetType);
+                //}
+
+                //var instance = new MapperConfiguration(mapperConfigurationExpression);
+
+                //instance.AssertConfigurationIsValid();
+
+                var instance = new MapperConfiguration(cfg =>
+                {
+                    foreach (var (sourceType, targetType) in factory.ConvertList)
+                    {
+                        cfg.CreateMap(sourceType, targetType);
+                    }
+                });
 
                 instance.AssertConfigurationIsValid();
 
