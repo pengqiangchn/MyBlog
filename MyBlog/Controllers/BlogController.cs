@@ -35,7 +35,7 @@ namespace MyBlog.Controllers
             dto.BriefIntroductionList.Add(new BriefIntroductionDto() { Title = "测试2" });
 
 
-            UserDTO user = _blogUserAppService.GetUser(Guid.Parse("00000001-0000-0000-0000-000000000000"));
+            //UserDTO user = _blogUserAppService.GetUser(Guid.Parse("00000001-0000-0000-0000-000000000000"));
 
 
             return View(dto);
@@ -43,17 +43,20 @@ namespace MyBlog.Controllers
 
         public JsonResult Test()
         {
-            BlogInfo blog = new BlogInfo()
-            {
-                Id = Guid.NewGuid(),
-                BlogName = "Test"
-            };
+            //BlogInfo blog = new BlogInfo()
+            //{
+            //    Id = Guid.NewGuid(),
+            //    BlogName = "Test"
+            //};
 
             ////bs.MapTo<ClassInfoDto>();
 
             //ClassInfoDto dto = _map.Map<ClassInfoDto>(bs);
 
-            BlogInfoDTO dto = blog.MapTo<BlogInfoDTO>(); ;
+            //BlogInfoDTO dto = blog.MapTo<BlogInfoDTO>(); ;
+
+
+            UserDTO dto = _blogUserAppService.GetUser(Guid.Parse("00000001-0000-0000-0000-000000000000"));
 
             return Json(dto);
 

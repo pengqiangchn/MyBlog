@@ -27,7 +27,6 @@ namespace Infrastructure.Data.Repositories
                 .FirstOrDefault(x => x.Id == Guid.Parse(id.ToString()));
 
             return user;
-            //return base.Get(id);
         }
     }
 }

@@ -1,12 +1,12 @@
-﻿using Application.Services;
+﻿using Application.DTOs.Profiles;
+using Application.Seedwork;
+using Application.Services;
 using Application.Services.Interfaces;
 using AutoMapper;
 using Domain.Modules.BlogAggs;
 using Domain.Services;
 using Domain.Services.Interfaces;
-using Infrastructure.Crosscutting.Adapter;
 using Infrastructure.Crosscutting.Localization;
-using Infrastructure.Crosscutting.NetFramework.Adapter;
 using Infrastructure.Crosscutting.NetFramework.Localization;
 using Infrastructure.Crosscutting.NetFramework.Validator;
 using Infrastructure.Crosscutting.Validator;
@@ -65,11 +65,7 @@ namespace MyBlog
             services.AddScoped<IBlogInfoAppService, BlogInfoAppService>();
             services.AddScoped<IBlogUserAppService, BlogUserAppService>();
 
-            //Adapters
-            services.AddSingleton<ITypeAdapterFactory, AutomapperTypeAdapterFactory>();
-            //TypeAdapterFactory.SetCurrent(services.BuildServiceProvider().GetService<ITypeAdapterFactory>());
-
-            services.AddAutoMapper();
+            services.AddAutoMapper(typeof(CommonProfile));
 
             //Validator
             EntityValidatorFactory.SetCurrent(new DataAnnotationsEntityValidatorFactory());
@@ -87,11 +83,7 @@ namespace MyBlog
 
             app.UseStaticFiles();
 
-            //app.useou
-            //app.get
-
-            app.SetTypeAdapterFactory(app.ApplicationServices.GetService<ITypeAdapterFactory>(),
-                app.ApplicationServices.GetService<IMapper>());
+            app.UseAutoMapper();
 
             app.UseRouting();
 

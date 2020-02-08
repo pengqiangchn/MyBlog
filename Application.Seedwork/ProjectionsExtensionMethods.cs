@@ -1,35 +1,31 @@
-﻿using Domain.Seedwork;
-using Infrastructure.Crosscutting.Adapter;
+﻿using AutoMapper;
+using Domain.Seedwork;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 
 namespace Application.Seedwork
 {
     public static class ProjectionsExtensionMethods
     {
-        /// <summary>
-        /// Project a type using a DTO
-        /// </summary>
-        /// <typeparam name="TProjection">The dto projection</typeparam>
-        /// <param name="entity">The source entity to project</param>
-        /// <returns>The projected type</returns>
+        static IMapper _mapper;
+
+        public static void UseAutoMapper(this IApplicationBuilder applicationBuilder)
+        {
+            _mapper = applicationBuilder.ApplicationServices.GetRequiredService<IMapper>();
+        }
+
         public static TProjection MapTo<TProjection>(this Entity item)
             where TProjection : class, new()
         {
-            var adapter = TypeAdapterFactory.CreateAdapter();
-            return adapter.Adapt<TProjection>(item);
+            return _mapper.Map<TProjection>(item);
         }
 
-        /// <summary>
-        /// projected a enumerable collection of items
-        /// </summary>
-        /// <typeparam name="TProjection">The dtop projection type</typeparam>
-        /// <param name="items">the collection of entity items</param>
-        /// <returns>Projected collection</returns>
         public static List<TProjection> MapToCollection<TProjection>(this IEnumerable<Entity> items)
             where TProjection : class, new()
         {
-            var adapter = TypeAdapterFactory.CreateAdapter();
-            return adapter.Adapt<List<TProjection>>(items);
+            return _mapper.Map<List<TProjection>>(items);
         }
     }
 }
