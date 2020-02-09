@@ -5,6 +5,7 @@ using Application.DTOs;
 using Application.Seedwork;
 using Application.Services.Interfaces;
 using Domain.Modules.BlogEntitys;
+using MemoryCache;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyBlog.Controllers
@@ -23,6 +24,8 @@ namespace MyBlog.Controllers
 
         public IActionResult Index()
         {
+            //var ss = CacheManager.AddOrSet
+
             BlogInfo info = _blogInfoAppService.GetAllBlog().First();
 
             IndexInfoDTO dto = new IndexInfoDTO();

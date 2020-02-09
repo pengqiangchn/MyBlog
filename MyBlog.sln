@@ -39,6 +39,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Crosscutting
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.DTOs", "Application.DTOs\Application.DTOs.csproj", "{AEF41BC4-A160-443B-A2D5-BFA6242BCFFE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Helper", "5.Helper", "{F9C6C3D5-9C37-4A8E-AB54-BE196601F72A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryCache", "MemoryCache\MemoryCache.csproj", "{825AAE83-8166-4F95-9995-AE4DBB3A9A68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,10 @@ Global
 		{AEF41BC4-A160-443B-A2D5-BFA6242BCFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEF41BC4-A160-443B-A2D5-BFA6242BCFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEF41BC4-A160-443B-A2D5-BFA6242BCFFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{825AAE83-8166-4F95-9995-AE4DBB3A9A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{825AAE83-8166-4F95-9995-AE4DBB3A9A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{825AAE83-8166-4F95-9995-AE4DBB3A9A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{825AAE83-8166-4F95-9995-AE4DBB3A9A68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +128,7 @@ Global
 		{7F00C019-4F9B-4E83-B947-077B6EF11B84} = {782255EB-9140-4220-A84E-D7AFC6385B80}
 		{5EC1CCCF-B725-46E5-AFDC-8C29A8DCD33A} = {9A15544E-FB70-4554-B67A-1457E676BB19}
 		{AEF41BC4-A160-443B-A2D5-BFA6242BCFFE} = {55261B4D-5E83-4662-9AD0-AA2EF2E49B15}
+		{825AAE83-8166-4F95-9995-AE4DBB3A9A68} = {F9C6C3D5-9C37-4A8E-AB54-BE196601F72A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D112797-3C62-4430-A738-A20AAD24532C}

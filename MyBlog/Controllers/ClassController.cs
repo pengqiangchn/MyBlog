@@ -1,4 +1,5 @@
 ﻿using Application.DTOs;
+using Application.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,56 +10,20 @@ namespace MyBlog.Controllers
 {
     public class ClassController : Controller
     {
-        public ClassController()
-        {
+        private readonly IBlogClassAppService _classAS;
 
+        public ClassController(IBlogClassAppService classAS)
+        {
+            _classAS = classAS;
         }
 
         [Route("Class")]
         [Route("Class/List")]
         public IActionResult List()
         {
-            List<ClassInfoDTO> dtoList = new List<ClassInfoDTO>();
-            dtoList.Add(new ClassInfoDTO()
-            {
-                ClassName = "测试1",
-                Count = 3,
-                OrderId = "1"
-            });
-            dtoList.Add(new ClassInfoDTO()
-            {
-                ClassName = "测试2",
-                Count = 44,
-                OrderId = "2"
-            });
+            List<ClassInfoDTO> dtoList = _classAS.GetClassListByBlogId(Guid.Parse(""));
 
             return View(dtoList);
         }
-        /*
-                public IActionResult ArticleList()
-                {
-                    return View();
-                }
-
-                public IActionResult ClassList()
-                {
-                    List<ClassInfoDto> dtoList = new List<ClassInfoDto>();
-                    dtoList.Add(new ClassInfoDto()
-                    {
-                        ClassName = "测试1",
-                        Count = 3,
-                        OrderId = "1"
-                    });
-                    dtoList.Add(new ClassInfoDto()
-                    {
-                        ClassName = "测试2",
-                        Count = 44,
-                        OrderId = "2"
-                    });
-
-                    return View(dtoList);
-                }
-                */
-
     }
 }

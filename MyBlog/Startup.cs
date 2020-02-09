@@ -12,6 +12,7 @@ using Infrastructure.Crosscutting.NetFramework.Validator;
 using Infrastructure.Crosscutting.Validator;
 using Infrastructure.Data.Repositories;
 using Infrastructure.Data.UnitOfWorks;
+using MemoryCache;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -84,6 +85,8 @@ namespace MyBlog
             app.UseStaticFiles();
 
             app.UseAutoMapper();
+
+            app.UseCacheManager();
 
             app.UseRouting();
 
