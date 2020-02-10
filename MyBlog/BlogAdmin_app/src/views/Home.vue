@@ -5,6 +5,8 @@
 
     <div class="home">这个是首页</div>
   </div>
+
+
 </template>
 
 <script>
