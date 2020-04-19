@@ -5,9 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Application.DTOs
+namespace Application.Data.DTOs
 {
-    [AutoInject(typeof(BlogInfo))]
     public class BlogInfoDTO
     {
         /// <summary>

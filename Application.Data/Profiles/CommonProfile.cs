@@ -1,11 +1,12 @@
-﻿using AutoMapper;
+﻿using Application.Data.DTOs;
+using AutoMapper;
 using Domain.Modules.BlogEntitys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Application.DTOs.Profiles
+namespace Application.Data.Profiles
 {
     public class CommonProfile : Profile
     {
@@ -16,6 +17,12 @@ namespace Application.DTOs.Profiles
 
 
             CreateMap<BlogInfo, BlogInfoDTO>();
+
+
+            CreateMap<BlogClass, ClassInfoDTO>();
+            CreateMap<ClassInfoDTO, BlogClass>();
+
+            CreateMap<BlogClass, ClassListDTO>();
         }
     }
 }

@@ -28,5 +28,14 @@ namespace Infrastructure.Data.Repositories
 
             return user;
         }
+
+        public BlogUser GetUserbyName(string userName)
+        {
+            BlogUser user = _context.BlogUsers
+                .Include(x => x.BlogInfo)
+                .SingleOrDefault(x => x.UserName == userName);
+
+            return user;
+        }
     }
 }

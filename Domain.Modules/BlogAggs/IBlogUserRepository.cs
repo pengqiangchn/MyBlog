@@ -6,6 +6,7 @@ namespace Domain.Modules.BlogAggs
 {
     public interface IBlogUserRepository : IRepository<BlogUser>
     {
+        public BlogUser GetUserbyName(string userName);
 
     }
 }

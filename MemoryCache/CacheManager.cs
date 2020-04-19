@@ -8,18 +8,13 @@ using System.Reflection;
 
 namespace MemoryCache
 {
-    public class CacheManager
+    public static class CacheManager
     {
         private const int SLIDINGTIME = 30;
         private const int ABSOLUTETIME = 60;
 
         private static IMemoryCache _cache;
         private static IConfiguration _config;
-
-        private CacheManager()
-        {
-
-        }
 
         /// <summary>
         /// 可调过期时间 默认30秒

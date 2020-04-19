@@ -1,0 +1,32 @@
+﻿@model ClassInfoDTO
+
+@{
+    ViewBag.Title = "创建分类";
+    Layout = "LeftBarLayout";
+}
+
+<h1>Create</h1>
+<h4>Class</h4>
+
+
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">分类名称</label>
+                <input asp-for="ClassName" class="form-control" />
+                <span asp-validation-for="ClassName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List">Back to List</a>
+</div>

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(UnitOfWork))]
-    [Migration("20200207120152_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200211105524_ClassUpdate2")]
+    partial class ClassUpdate2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -68,6 +68,7 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("char(36)");
 
                     b.Property<string>("ClassName")
+                        .IsRequired()
                         .HasColumnType("varchar(32)");
 
                     b.Property<int>("Level")
@@ -76,14 +77,12 @@ namespace Infrastructure.Data.Migrations
                     b.Property<string>("OrderID")
                         .HasColumnType("varchar(12)");
 
-                    b.Property<Guid>("ParentId")
+                    b.Property<Guid?>("ParentId")
                         .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BlogId");
-
-                    b.HasIndex("ParentId");
 
                     b.ToTable("BlogClasses");
                 });
@@ -165,12 +164,6 @@ namespace Infrastructure.Data.Migrations
                     b.HasOne("Domain.Modules.BlogEntitys.BlogInfo", "BlogInfo")
                         .WithMany("Classes")
                         .HasForeignKey("BlogId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Modules.BlogEntitys.BlogClass", "ParentClass")
-                        .WithMany("Childrens")
-                        .HasForeignKey("ParentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

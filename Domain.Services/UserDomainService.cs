@@ -17,5 +17,10 @@ namespace Domain.Services
         {
             _userRepository = userRepository;
         }
+
+        public BlogUser GetUserbyName(string userName)
+        {
+            return _userRepository.GetUserbyName(userName);
+        }
     }
 }

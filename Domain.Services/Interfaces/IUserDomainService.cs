@@ -8,6 +8,6 @@ namespace Domain.Services.Interfaces
 {
     public interface IUserDomainService : IDomainService<BlogUser>
     {
-
+        public BlogUser GetUserbyName(string userName);
     }
 }

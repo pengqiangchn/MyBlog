@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+﻿using Application.Data.DTOs;
 using Application.Seedwork;
 using Application.Services.Interfaces;
 using Domain.Modules.BlogEntitys;
@@ -26,6 +26,14 @@ namespace Application.Services
 
 
             return dto;
+        }
+
+        public UserDTO GetUser(string userName)
+        {
+            var user = _userDomainService.GetUserbyName(userName);
+
+            return user.MapTo<UserDTO>();
+
         }
     }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = {
     devServer: {
         port: 3000,

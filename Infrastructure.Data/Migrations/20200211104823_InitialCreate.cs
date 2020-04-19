@@ -60,12 +60,6 @@ namespace Infrastructure.Data.Migrations
                         principalTable: "BlogInfos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BlogClasses_BlogClasses_ParentId",
-                        column: x => x.ParentId,
-                        principalTable: "BlogClasses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -123,11 +117,6 @@ namespace Infrastructure.Data.Migrations
                 name: "IX_BlogClasses_BlogId",
                 table: "BlogClasses",
                 column: "BlogId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BlogClasses_ParentId",
-                table: "BlogClasses",
-                column: "ParentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BlogInfos_UserId",

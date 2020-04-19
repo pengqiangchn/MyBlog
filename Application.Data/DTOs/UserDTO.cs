@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.DTOs
+namespace Application.Data.DTOs
 {
-    //[AutoInject(typeof(BlogUser))]
     public class UserDTO
     {
+        public Guid Id { get; set; }
+
         public string UserName { get; set; }
 
         public BlogInfoDTO BlogInfoDTO { get; set; }

@@ -1,4 +1,4 @@
-﻿using Application.DTOs.Profiles;
+﻿using Application.Data.Profiles;
 using Application.Seedwork;
 using Application.Services;
 using Application.Services.Interfaces;
@@ -37,7 +37,10 @@ namespace MyBlog
             //services.AddDbContext<MyBlogContext>(options =>
             //        options.UseMySql(Configuration.GetConnectionString("MyBlogContext")));
             services.AddDbContext<UnitOfWork>(options =>
-                    options.UseMySql(Configuration.GetConnectionString("MyBlogContext")));
+            {
+                options.EnableSensitiveDataLogging();
+                options.UseMySql(Configuration.GetConnectionString("MyBlogContext"));
+            });
 
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
@@ -56,15 +59,19 @@ namespace MyBlog
             //Repositories
             services.AddScoped<IBlogInfoRepository, BlogInfoRepository>();
             services.AddScoped<IBlogUserRepository, BlogUserRepository>();
+            services.AddScoped<IBlogClassRepository, BlogClassRepository>();
+
 
 
             //DomainServices
             services.AddScoped<IBlogDomainService, BlogDomainService>();
             services.AddScoped<IUserDomainService, UserDomainService>();
+            services.AddScoped<IClassDomainService, ClassDomainService>();
 
             //AppServices
             services.AddScoped<IBlogInfoAppService, BlogInfoAppService>();
             services.AddScoped<IBlogUserAppService, BlogUserAppService>();
+            services.AddScoped<IBlogClassAppService, BlogClassAppService>();
 
             services.AddAutoMapper(typeof(CommonProfile));
 

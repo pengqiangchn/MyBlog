@@ -13,6 +13,7 @@ namespace Domain.Modules.BlogEntitys
         /// 分类名称
         /// </summary>
         [Column(TypeName = "varchar(32)")]
+        [Required]
         public string ClassName { get; set; }
 
         /// <summary>
@@ -26,7 +27,6 @@ namespace Domain.Modules.BlogEntitys
         [Column(TypeName = "varchar(12)")]
         public string OrderID { get; set; }
 
-
         /// <summary>
         /// 博客Id
         /// </summary>
@@ -34,18 +34,17 @@ namespace Domain.Modules.BlogEntitys
 
         public virtual BlogInfo BlogInfo { get; set; }
 
-
         /// <summary>
         /// 上级分类
-        /// </summary>
-        public Guid ParentId { get; set; }
+        /// </summary>        
+        public Guid? ParentId { get; set; }
 
-        public virtual BlogClass ParentClass { get; set; }
+        //public virtual BlogClass ParentClass { get; set; }
 
-        /// <summary>
-        /// 下级分类
-        /// </summary>
-        public virtual List<BlogClass> Childrens { get; set; }
+        ///// <summary>
+        ///// 下级分类
+        ///// </summary>
+        //public virtual List<BlogClass> Childrens { get; set; }
 
         /// <summary>
         /// 文章列表

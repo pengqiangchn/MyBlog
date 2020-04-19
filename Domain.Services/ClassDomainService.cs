@@ -18,5 +18,13 @@ namespace Domain.Services
             _clsssRepository = clsssRepository;
         }
 
+        //public List<BlogClass> GetClassList(Guid blogId)
+        //{
+        //    var list = _clsssRepository.GetClassList(blogId);
+
+
+        //    return list;
+        //}
+
     }
 }

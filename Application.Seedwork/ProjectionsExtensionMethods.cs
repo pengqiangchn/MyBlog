@@ -27,5 +27,17 @@ namespace Application.Seedwork
         {
             return _mapper.Map<List<TProjection>>(items);
         }
+
+        public static TProjection MapTo<TProjection>(this DTO item)
+            where TProjection : class, new()
+        {
+            return _mapper.Map<TProjection>(item);
+        }
+
+        public static List<TProjection> MapToCollection<TProjection>(this IEnumerable<DTO> items)
+            where TProjection : class, new()
+        {
+            return _mapper.Map<List<TProjection>>(items);
+        }
     }
 }

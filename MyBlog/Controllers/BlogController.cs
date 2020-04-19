@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Application.DTOs;
+using Application.Data.DTOs;
 using Application.Seedwork;
 using Application.Services.Interfaces;
 using Domain.Modules.BlogEntitys;
 using MemoryCache;
 using Microsoft.AspNetCore.Mvc;
+using MyBlog.Enum;
 
 namespace MyBlog.Controllers
 {
@@ -39,10 +40,27 @@ namespace MyBlog.Controllers
 
 
             //UserDTO user = _blogUserAppService.GetUser(Guid.Parse("00000001-0000-0000-0000-000000000000"));
-
+            SetAdminUser();
 
             return View(dto);
         }
+
+        /// <summary>
+        /// 当作登录了
+        /// </summary>
+        private void SetAdminUser()
+        {
+            //BlogUser blogUser = new BlogUser
+            //{
+            //    UserName = "Admin",
+            //    Id = Guid.Parse("00000001-0000-0000-0000-000000000000")
+            //};
+
+            UserDTO blogUser = _blogUserAppService.GetUser("Admin");
+
+            CacheManager.AddOrSet(CacheKey.GetUserKey("Admin"), x => blogUser);
+        }
+
 
         public JsonResult Test()
         {

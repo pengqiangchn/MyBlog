@@ -51,8 +51,8 @@ namespace Infrastructure.Data.UnitOfWorks
             modelBuilder.Entity<BlogClass>().HasOne(x => x.BlogInfo)
                 .WithMany(x => x.Classes).HasForeignKey(x => x.BlogId);
 
-            modelBuilder.Entity<BlogClass>().HasOne(x => x.ParentClass)
-                .WithMany(x => x.Childrens).HasForeignKey(x => x.ParentId);
+            //modelBuilder.Entity<BlogClass>().HasOne(x => x.ParentClass)
+            //    .WithMany(x => x.Childrens).HasForeignKey(x => x.ParentId);
 
             //文章信息
             modelBuilder.Entity<BlogArticle>().HasOne(x => x.BlogInfo)

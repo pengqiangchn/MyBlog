@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>Application.DTOs</AssemblyName>
-    <RootNamespace>Application.DTOs</RootNamespace>
+    <AssemblyName>Application.Data</AssemblyName>
+    <RootNamespace>Application.Data</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

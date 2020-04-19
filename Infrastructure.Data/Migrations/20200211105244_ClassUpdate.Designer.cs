@@ -3,14 +3,16 @@ using System;
 using Infrastructure.Data.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(UnitOfWork))]
-    partial class UnitOfWorkModelSnapshot : ModelSnapshot
+    [Migration("20200211105244_ClassUpdate")]
+    partial class ClassUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -66,7 +68,6 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("char(36)");
 
                     b.Property<string>("ClassName")
-                        .IsRequired()
                         .HasColumnType("varchar(32)");
 
                     b.Property<int>("Level")

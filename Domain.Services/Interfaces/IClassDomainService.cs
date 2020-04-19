@@ -8,6 +8,6 @@ namespace Domain.Services.Interfaces
 {
     public interface IClassDomainService : IDomainService<BlogClass>
     {
-
+        //List<BlogClass> GetClassList(Guid blogId);
     }
 }

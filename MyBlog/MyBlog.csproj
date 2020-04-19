@@ -54,7 +54,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application.DTOs\Application.DTOs.csproj" />
+    <ProjectReference Include="..\Application.Data\Application.Data.csproj" />
     <ProjectReference Include="..\Application.Services\Application.Services.csproj" />
     <ProjectReference Include="..\Domain.Services\Domain.Services.csproj" />
     <ProjectReference Include="..\Infrastructure.Crosscutting.NetFramework\Infrastructure.Crosscutting.NetFramework.csproj" />

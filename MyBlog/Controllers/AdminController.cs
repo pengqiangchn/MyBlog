@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Application.Data.DTOs;
+using Application.Seedwork;
+using Domain.Modules.BlogEntitys;
+using MemoryCache;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +19,20 @@ namespace MyBlog.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            string userKey = CacheKey.GetUserKey("Admin");
+            UserDTO dto = CacheManager.Get<UserDTO>(userKey);
+
+
+            if (dto == null)
+            {
+                return RedirectToAction("Index", "Blog");
+            }
+            else
+            {
+                ViewBag.User = dto;
+            }
+
+            return View(dto);
         }
     }
 }

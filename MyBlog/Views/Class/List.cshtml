@@ -1,17 +1,19 @@
-﻿@model List<ClassInfoDTO>
+﻿@model IEnumerable<ClassInfoDTO>
 
 @{
     ViewBag.Title = "分类管理";
     Layout = "LeftBarLayout";
 }
 
+<a class="btn btn-primary" asp-action="Create"> 新增 </a>
+<br />
 <table class="table">
     <thead>
         <tr>
-            <th>序号</th>
-            <th>类别</th>
-            <th>操作</th>
-            <th>文章数</th>
+            <th scope="col">序号</th>
+            <th scope="col">类别</th>
+            <th scope="col">操作</th>
+            <th scope="col">文章数</th>
         </tr>
     </thead>
     <tbody>
@@ -23,7 +25,7 @@
                 <td><a asp-action="Edit">编辑</a> &ensp;|&ensp;<a asp-action="Delete">删除</a></td>
                 <td>@classInfo.Count</td>
             </tr>
-
         }
+
     </tbody>
 </table>
